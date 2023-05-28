@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://8hldikdcwbb0"]
+
+[ext_resource type="PackedScene" uid="uid://w1d30fdudlw2" path="res://Objects/test.tscn" id="1_h52tb"]
+[ext_resource type="PackedScene" uid="uid://dvwo7pr57c4w8" path="res://Objects/test2.tscn" id="2_shidk"]
+
+[node name="MainWorld" type="Node2D"]
+
+[node name="CollisionShape2D" parent="." instance=ExtResource("1_h52tb")]
+position = Vector2(299, 152)
+
+[node name="CollisionShape2D2" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(264, 432)
+
+[node name="Area2D" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(290, 423)
+
+[node name="CollisionShape2D3" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(340, 399)
+
+[node name="Area2D2" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(317, 413)
+
+[node name="CollisionShape2D2" parent="Area2D2" instance=ExtResource("2_shidk")]
+position = Vector2(250, 430)
+
+[node name="Area2D" parent="Area2D2" instance=ExtResource("2_shidk")]
+position = Vector2(273, 425)
+
+[node name="CollisionShape2D4" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(368, 385)
+
+[node name="Area2D3" parent="." instance=ExtResource("2_shidk")]
+position = Vector2(391, 380)
