@@ -1,24 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://8hldikdcwbb0"]
+[gd_scene load_steps=4 format=3 uid="uid://8hldikdcwbb0"]
 
 [ext_resource type="PackedScene" uid="uid://w1d30fdudlw2" path="res://Objects/test.tscn" id="1_h52tb"]
-[ext_resource type="Texture2D" uid="uid://bs4hgj82tb3ca" path="res://Art/Fpe42f0X0AAd5Ph.jpg" id="2_j8n1r"]
+[ext_resource type="Texture2D" uid="uid://bp0evku40f28d" path="res://Art/grass.jpg" id="2_l8rws"]
+[ext_resource type="PackedScene" uid="uid://b7b61pf36cuyn" path="res://Objects/bullet.tscn" id="3_hjqs2"]
 
 [node name="MainWorld" type="Node2D"]
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_h52tb")]
 position = Vector2(224, 401)
 
-[node name="Fpe42f0x0aAd5Ph" type="Sprite2D" parent="."]
+[node name="Grass" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(-392, 562)
-texture = ExtResource("2_j8n1r")
+position = Vector2(491, 225.5)
+scale = Vector2(3.67111, 3.31704)
+texture = ExtResource("2_l8rws")
 
-[node name="Fpe42f0x0aAd5Ph2" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(456, 22)
-texture = ExtResource("2_j8n1r")
-
-[node name="Fpe42f0x0aAd5Ph3" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(842, 713)
-texture = ExtResource("2_j8n1r")
+[node name="Bullet" parent="." instance=ExtResource("3_hjqs2")]
+z_index = 1
+position = Vector2(504, 212)
