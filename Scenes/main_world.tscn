@@ -1,20 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://8hldikdcwbb0"]
+[gd_scene load_steps=5 format=3 uid="uid://8hldikdcwbb0"]
 
 [ext_resource type="PackedScene" uid="uid://w1d30fdudlw2" path="res://Objects/test.tscn" id="1_h52tb"]
-[ext_resource type="Texture2D" uid="uid://bp0evku40f28d" path="res://Art/grass.jpg" id="2_l8rws"]
-[ext_resource type="PackedScene" uid="uid://b7b61pf36cuyn" path="res://Objects/bullet.tscn" id="3_hjqs2"]
+[ext_resource type="Texture2D" uid="uid://co8rq0k2r38xj" path="res://Art/tree.png" id="3_nrgiu"]
+[ext_resource type="Texture2D" uid="uid://yab5n4tyk0la" path="res://Art/grid.png" id="4_tgyam"]
+[ext_resource type="Texture2D" uid="uid://duvbnb7yype4c" path="res://Art/crate.png" id="5_lhch0"]
 
 [node name="MainWorld" type="Node2D"]
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_h52tb")]
 position = Vector2(224, 401)
 
-[node name="Grass" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(285, 550)
-scale = Vector2(3.67111, 3.31704)
-texture = ExtResource("2_l8rws")
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(-694, 831)
+texture = ExtResource("3_nrgiu")
 
-[node name="Bullet" parent="." instance=ExtResource("3_hjqs2")]
-z_index = 1
-position = Vector2(529, 288)
+[node name="Tree2" type="Sprite2D" parent="."]
+position = Vector2(-309, -170)
+texture = ExtResource("3_nrgiu")
+
+[node name="Tree3" type="Sprite2D" parent="."]
+position = Vector2(1238, 860)
+texture = ExtResource("3_nrgiu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
+offset_left = -8993.0
+offset_top = -5678.0
+offset_right = 10330.0
+offset_bottom = 7062.0
+texture = ExtResource("4_tgyam")
+stretch_mode = 1
+
+[node name="Crate" type="Sprite2D" parent="."]
+position = Vector2(-184, 667)
+texture = ExtResource("5_lhch0")
+
+[node name="Crate2" type="Sprite2D" parent="."]
+position = Vector2(1106, 108)
+rotation = 0.47822
+texture = ExtResource("5_lhch0")
+
+[node name="Crate3" type="Sprite2D" parent="."]
+position = Vector2(572, 957)
+rotation = -0.23911
+texture = ExtResource("5_lhch0")
