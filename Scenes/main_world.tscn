@@ -1,33 +1,24 @@
 [gd_scene load_steps=3 format=3 uid="uid://8hldikdcwbb0"]
 
 [ext_resource type="PackedScene" uid="uid://w1d30fdudlw2" path="res://Objects/test.tscn" id="1_h52tb"]
-[ext_resource type="PackedScene" uid="uid://dvwo7pr57c4w8" path="res://Objects/test2.tscn" id="2_shidk"]
+[ext_resource type="Texture2D" uid="uid://bs4hgj82tb3ca" path="res://Art/Fpe42f0X0AAd5Ph.jpg" id="2_j8n1r"]
 
 [node name="MainWorld" type="Node2D"]
 
-[node name="CollisionShape2D" parent="." instance=ExtResource("1_h52tb")]
-position = Vector2(299, 152)
+[node name="RigidBody2D" parent="." instance=ExtResource("1_h52tb")]
+position = Vector2(224, 401)
 
-[node name="CollisionShape2D2" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(264, 432)
+[node name="Fpe42f0x0aAd5Ph" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-392, 562)
+texture = ExtResource("2_j8n1r")
 
-[node name="Area2D" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(290, 423)
+[node name="Fpe42f0x0aAd5Ph2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(456, 22)
+texture = ExtResource("2_j8n1r")
 
-[node name="CollisionShape2D3" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(340, 399)
-
-[node name="Area2D2" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(317, 413)
-
-[node name="CollisionShape2D2" parent="Area2D2" instance=ExtResource("2_shidk")]
-position = Vector2(250, 430)
-
-[node name="Area2D" parent="Area2D2" instance=ExtResource("2_shidk")]
-position = Vector2(273, 425)
-
-[node name="CollisionShape2D4" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(368, 385)
-
-[node name="Area2D3" parent="." instance=ExtResource("2_shidk")]
-position = Vector2(391, 380)
+[node name="Fpe42f0x0aAd5Ph3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(842, 713)
+texture = ExtResource("2_j8n1r")
