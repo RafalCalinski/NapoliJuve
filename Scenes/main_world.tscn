@@ -11,10 +11,10 @@ position = Vector2(224, 401)
 
 [node name="Grass" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(491, 225.5)
+position = Vector2(2805, 1765)
 scale = Vector2(3.67111, 3.31704)
 texture = ExtResource("2_l8rws")
 
 [node name="Bullet" parent="." instance=ExtResource("3_hjqs2")]
 z_index = 1
-position = Vector2(504, 212)
+position = Vector2(529, 288)
