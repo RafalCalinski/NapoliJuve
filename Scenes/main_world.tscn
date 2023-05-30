@@ -7,11 +7,7 @@
 
 [node name="MainWorld" type="Node2D"]
 
-[node name="RigidBody2D" parent="." instance=ExtResource("1_h52tb")]
-position = Vector2(224, 401)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -2
+[node name="Background" type="TextureRect" parent="."]
 offset_left = -8993.0
 offset_top = -5678.0
 offset_right = 10330.0
@@ -19,36 +15,45 @@ offset_bottom = 7062.0
 texture = ExtResource("4_tgyam")
 stretch_mode = 1
 
-[node name="Crate" parent="." instance=ExtResource("3_xnuaj")]
-position = Vector2(838, 223)
-rotation = 0.127409
-lock_rotation = true
-freeze = true
+[node name="RigidBody2D" parent="." instance=ExtResource("1_h52tb")]
+position = Vector2(224, 401)
 
-[node name="Crate2" parent="." instance=ExtResource("3_xnuaj")]
-position = Vector2(-100, 803)
-rotation = 0.39618
+[node name="Trees" type="Node2D" parent="."]
 
-[node name="Crate3" parent="." instance=ExtResource("3_xnuaj")]
-position = Vector2(-480, 301)
-rotation = -0.265485
-
-[node name="Tree2" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree2" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(-1189, 321)
 
-[node name="Tree" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(-1173, 945)
 
-[node name="Tree3" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree3" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(-989, 1113)
 rotation = -1.06278
 
-[node name="Tree4" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree4" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(-797, 1265)
 rotation = 0.628649
+scale = Vector2(1, 1)
 
-[node name="Tree5" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree5" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(-33, -279)
 
-[node name="Tree6" parent="." instance=ExtResource("5_nn2i1")]
+[node name="Tree6" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(891, 1173)
+
+[node name="Crates" type="Node2D" parent="."]
+
+[node name="Crate" parent="Crates" instance=ExtResource("3_xnuaj")]
+position = Vector2(838, 223)
+rotation = 0.127409
+scale = Vector2(1, 1)
+lock_rotation = true
+freeze = true
+
+[node name="Crate2" parent="Crates" instance=ExtResource("3_xnuaj")]
+position = Vector2(-100, 803)
+rotation = 0.39618
+
+[node name="Crate3" parent="Crates" instance=ExtResource("3_xnuaj")]
+position = Vector2(-480, 301)
+rotation = -0.265485
