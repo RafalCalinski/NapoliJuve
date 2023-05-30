@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+@export var loot : PackedScene
+
 var HP = 10
 
 # Called when the node enters the scene tree for the first time.
@@ -21,9 +23,15 @@ func _on_hitbox_area_entered(area):
 		$Hitbox.queue_free()
 		$CollisionShape2D.queue_free()
 		$AudioStreamPlayer.play()
+		
+		var wood = loot.instantiate()
+		owner.add_child(wood)
+		wood.position = global_position
+		wood.rotation = randf_range(0, 360)
 
 
 #func _on_animation_player_animation_finished(anim_name):
 #	queue_free()
 func _on_audio_stream_player_finished():
 	queue_free()
+	

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3mjtvc7t2fr6"]
+
+[ext_resource type="Script" path="res://Objects/wood.gd" id="1_hxvx5"]
+[ext_resource type="Texture2D" uid="uid://c0iugcusimpy2" path="res://Art/wood.png" id="1_wrtlb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uty17"]
+size = Vector2(266, 100)
+
+[node name="Wood" type="Node2D"]
+script = ExtResource("1_hxvx5")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_wrtlb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_uty17")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
