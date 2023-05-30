@@ -3,17 +3,18 @@
 [ext_resource type="PackedScene" uid="uid://crhoxmmfii5dr" path="res://Objects/crate.tscn" id="3_xnuaj"]
 [ext_resource type="PackedScene" uid="uid://cp4kxw1hg7kp4" path="res://Objects/player.tscn" id="4_mbljp"]
 [ext_resource type="Texture2D" uid="uid://yab5n4tyk0la" path="res://Art/grid.png" id="4_tgyam"]
-[ext_resource type="PackedScene" uid="uid://dr5ukpe2fdpd8" path="res://Objects/tree.tscn" id="5_nn2i1"]
+[ext_resource type="PackedScene" uid="uid://b8i5vx472luui" path="res://Objects/tree.tscn" id="5_nn2i1"]
 
 [node name="MainWorld" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
-offset_left = -8993.0
-offset_top = -5678.0
-offset_right = 10330.0
-offset_bottom = 7062.0
+offset_left = -9082.0
+offset_top = -5917.0
+offset_right = 10241.0
+offset_bottom = 6823.0
 texture = ExtResource("4_tgyam")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Crates" type="Node" parent="."]
 
