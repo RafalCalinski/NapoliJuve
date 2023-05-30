@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b566c444bdljl"
+path="res://.godot/imported/taco bell sound.mp3-e16c211466fe3bdcfa3e2d7ae7237e58.mp3str"
+
+[deps]
+
+source_file="res://Audio/taco bell sound.mp3"
+dest_files=["res://.godot/imported/taco bell sound.mp3-e16c211466fe3bdcfa3e2d7ae7237e58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
