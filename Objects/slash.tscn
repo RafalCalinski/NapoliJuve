@@ -70,6 +70,8 @@ _data = {
 }
 
 [node name="Slash" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_wqqhf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

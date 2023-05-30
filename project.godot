@@ -48,6 +48,15 @@ melee={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Player"
+2d_render/layer_2="Destroyable"
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Destroyable"
+2d_physics/layer_3="Melee"
+2d_physics/layer_4="Ranged"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
