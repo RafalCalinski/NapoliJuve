@@ -13,7 +13,8 @@ func _process(delta):
 
 func _on_hitbox_area_entered(area):
 	$AnimationPlayer.play("destroy")
-	$Hitbox.monitoring = false
+	$Hitbox.queue_free()
+	$CollisionShape2D.queue_free()
 	$AudioStreamPlayer.play()
 
 
