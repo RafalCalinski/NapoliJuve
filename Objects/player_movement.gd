@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-
+@export var bullet_scene : PackedScene
+@export var melee_scene : PackedScene
 
 const max_speed = 1000
 const acceleration = 3000
@@ -38,8 +39,17 @@ func _physics_process(delta):
 	
 	
 func _unhandled_input(event: InputEvent):
-	if event.is_action_released("shoot"):
+	if event.is_action_pressed("shoot"):
 		shoot()
+	if event.is_action_pressed("melee"):
+		melee()
 		
 func shoot():
-	print("shoot")
+	var b = bullet_scene.instantiate()
+	owner.add_child(b)
+	b.transform = $Marker2D.global_transform
+	
+func melee():
+	var m = melee_scene.instantiate()
+	owner.add_child(m)
+	m.transform = $Marker2D.global_transform
