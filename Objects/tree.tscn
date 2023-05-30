@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dr5ukpe2fdpd8"]
+[gd_scene load_steps=11 format=3 uid="uid://dr5ukpe2fdpd8"]
 
 [ext_resource type="Texture2D" uid="uid://co8rq0k2r38xj" path="res://Art/tree.png" id="1_dadye"]
 [ext_resource type="Script" path="res://Objects/tree.gd" id="1_xumbe"]
 [ext_resource type="AudioStream" uid="uid://yljothvawctq" path="res://Audio/destroy.mp3" id="3_38t45"]
+[ext_resource type="AudioStream" uid="uid://b566c444bdljl" path="res://Audio/taco bell sound.mp3" id="4_0a01q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rh5cj"]
 radius = 109.073
@@ -116,6 +117,9 @@ libraries = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_38t45")
 volume_db = -20.0
+
+[node name="hitsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0a01q")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
