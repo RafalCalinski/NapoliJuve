@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var melee_scene : PackedScene
 
 const max_speed = 1000
+const max_sprint_speed = 1500
 const acceleration = 3000
 const friction = 3000
 
@@ -24,15 +25,15 @@ func player_movement(delta):
 			velocity = Vector2.ZERO
 	else:
 		velocity += (input * acceleration * delta)
-		velocity = velocity.limit_length(max_speed)
+		if Input.is_action_pressed("sprint"):
+			velocity = velocity.limit_length(max_sprint_speed)
+		else:
+			velocity = velocity.limit_length(max_speed)
 		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
-	
-	
 	player_movement(delta)
 	move_and_slide()
 	look_at(get_global_mouse_position())
