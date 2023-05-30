@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var HP = 3
+var HP = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +14,7 @@ func _process(delta):
 
 func _on_hitbox_area_entered(area):
 	HP -= 1
+	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("hit")
 	if HP <= 0:
 		$AnimationPlayer.play("destroy")
