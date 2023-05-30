@@ -16,6 +16,7 @@ func _on_hitbox_area_entered(area):
 	HP -= 1
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("hit")
+	$hitsound.play()
 	if HP <= 0:
 		$AnimationPlayer.play("destroy")
 		$Hitbox.queue_free()

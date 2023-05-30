@@ -53,3 +53,4 @@ func melee():
 	var m = melee_scene.instantiate()
 	owner.add_child(m)
 	m.transform = $Marker2D.global_transform
+	$AudioStreamPlayer.play()
