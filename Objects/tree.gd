@@ -10,11 +10,11 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
-func _on_hitbox_area_entered(area):
+func _on_hitbox_area_entered(_area):
 	HP -= 1
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("hit")
@@ -26,7 +26,8 @@ func _on_hitbox_area_entered(area):
 		$AudioStreamPlayer.play()
 		
 		var wood = loot.instantiate()
-		owner.add_child(wood)
+		
+		owner.call_deferred("add_child", wood)
 		wood.position = global_position
 		wood.rotation = randf_range(0, 360)
 

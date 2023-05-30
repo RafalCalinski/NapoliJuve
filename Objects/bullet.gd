@@ -10,7 +10,7 @@ func _process(delta):
 
 
 
-func _on_area_entered(area):
+func _on_area_entered(_area):
 	pass
 	#if area.is_in_group("nazwa grupy"):
 
