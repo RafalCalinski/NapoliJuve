@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://8hldikdcwbb0"]
+[gd_scene load_steps=6 format=3 uid="uid://8hldikdcwbb0"]
 
 [ext_resource type="PackedScene" uid="uid://crhoxmmfii5dr" path="res://Objects/crate.tscn" id="3_xnuaj"]
 [ext_resource type="PackedScene" uid="uid://cp4kxw1hg7kp4" path="res://Objects/player.tscn" id="4_mbljp"]
 [ext_resource type="Texture2D" uid="uid://yab5n4tyk0la" path="res://Art/grid.png" id="4_tgyam"]
 [ext_resource type="PackedScene" uid="uid://b8i5vx472luui" path="res://Objects/tree.tscn" id="5_nn2i1"]
+[ext_resource type="Texture2D" uid="uid://c133gn1nadund" path="res://Art/pond.png" id="5_yb7gt"]
 
 [node name="MainWorld" type="Node2D"]
 
@@ -14,6 +15,7 @@ offset_right = 10330.0
 offset_bottom = 7062.0
 texture = ExtResource("4_tgyam")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Trees" type="Node2D" parent="."]
 
@@ -32,7 +34,7 @@ position = Vector2(-797, 1265)
 rotation = 0.628649
 
 [node name="Tree5" parent="Trees" instance=ExtResource("5_nn2i1")]
-position = Vector2(-33, -279)
+position = Vector2(-134, -425)
 
 [node name="Tree6" parent="Trees" instance=ExtResource("5_nn2i1")]
 position = Vector2(891, 1173)
@@ -55,3 +57,16 @@ rotation = -0.265485
 
 [node name="Player" parent="." instance=ExtResource("4_mbljp")]
 position = Vector2(-3, -5)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(-1294, -460.5)
+scale = Vector2(0.480799, 0.480799)
+lock_rotation = true
+freeze = true
+
+[node name="Pond" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(-10.3992, -13.5192)
+texture = ExtResource("5_yb7gt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-183.029, -622.922, -353.578, -597.963, -515.808, -485.65, -574.045, -406.615, -628.121, -500.209, -707.156, -539.727, -765.393, -489.81, -821.55, -504.369, -915.144, -479.411, -950.502, -429.494, -925.543, -365.018, -867.307, -333.819, -942.182, -304.701, -981.7, -256.864, -958.821, -194.468, -925.543, -163.27, -1029.54, -50.9568, -1060.73, 154.951, -950.502, 369.177, -794.511, 437.813, -582.364, 518.928, -205.907, 587.564, 110.233, 622.922, 330.7, 614.602, 603.163, 523.088, 798.671, 375.417, 985.859, 150.791, 1029.54, -17.6789, 956.741, -86.3147, 696.757, -65.516, 553.246, -100.874, 513.728, -142.471, 524.128, -335.899, 499.169, -464.851, 393.096, -550.126, -29.1182, -637.481)
