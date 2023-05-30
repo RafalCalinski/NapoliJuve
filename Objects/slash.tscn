@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://bs1hro4x3utqv"]
+
+[ext_resource type="Script" path="res://Objects/melee.gd" id="1_wqqhf"]
+[ext_resource type="Texture2D" uid="uid://b88xv55qjpn2h" path="res://Art/slash.png" id="2_v0qvj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7ati"]
+size = Vector2(223, 502)
+
+[sub_resource type="Animation" id="Animation_hkca6"]
+resource_name = "Slash"
+length = 0.1
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.1),
+"transitions": PackedFloat32Array(0.450626, 5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(0.75, 0.75)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(4.92458, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jg55g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bucbs"]
+_data = {
+"RESET": SubResource("Animation_jg55g"),
+"Slash": SubResource("Animation_hkca6")
+}
+
+[node name="Slash" type="Area2D"]
+script = ExtResource("1_wqqhf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(130, -1)
+texture = ExtResource("2_v0qvj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(138, 0)
+shape = SubResource("RectangleShape2D_j7ati")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bucbs")
+}
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

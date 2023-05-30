@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://w1d30fdudlw2"]
+[gd_scene load_steps=6 format=3 uid="uid://cp4kxw1hg7kp4"]
 
 [ext_resource type="Script" path="res://Objects/player_movement.gd" id="1_jdupb"]
 [ext_resource type="Texture2D" uid="uid://dk1aakryicip2" path="res://Art/character_test.png" id="1_pk05o"]
 [ext_resource type="PackedScene" uid="uid://b7b61pf36cuyn" path="res://Objects/bullet.tscn" id="2_uh1ak"]
-[ext_resource type="PackedScene" uid="uid://bs1hro4x3utqv" path="res://Objects/melee.tscn" id="3_augpy"]
+[ext_resource type="PackedScene" uid="uid://bs1hro4x3utqv" path="res://Objects/slash.tscn" id="3_6xk2m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fca8f"]
 radius = 100.125
@@ -11,7 +11,7 @@ radius = 100.125
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_jdupb")
 bullet_scene = ExtResource("2_uh1ak")
-melee_scene = ExtResource("3_augpy")
+melee_scene = ExtResource("3_6xk2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pk05o")
