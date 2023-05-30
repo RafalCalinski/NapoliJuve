@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://co8rq0k2r38xj" path="res://Art/tree.png" id="1_dadye"]
 [ext_resource type="Script" path="res://Objects/tree.gd" id="1_xumbe"]
+[ext_resource type="PackedScene" uid="uid://b3mjtvc7t2fr6" path="res://Objects/wood.tscn" id="2_dcjhe"]
 [ext_resource type="AudioStream" uid="uid://yljothvawctq" path="res://Audio/destroy.mp3" id="3_38t45"]
 [ext_resource type="AudioStream" uid="uid://b566c444bdljl" path="res://Audio/taco bell sound.mp3" id="4_0a01q"]
 
@@ -94,6 +95,7 @@ _data = {
 [node name="Tree" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_xumbe")
+loot = ExtResource("2_dcjhe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_dadye")
