@@ -9,7 +9,7 @@ void fragment() {
 	float x = SCREEN_UV.x - 0.5;
 	float y = SCREEN_UV.y - 0.5;
 	float d = x*x + y*y;
-	float darken = (1.0 - d) * vignette;
+	float darken = (1.0 - d * vignette);
 	
 	float r = texture(SCREEN_TEXTURE, SCREEN_UV).r;
 	float g = texture(SCREEN_TEXTURE, vec2(SCREEN_UV.x + (d * amount * SCREEN_PIXEL_SIZE.x), SCREEN_UV.y)).g;
