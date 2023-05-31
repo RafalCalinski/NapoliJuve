@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://crhoxmmfii5dr"]
 
 [ext_resource type="Texture2D" uid="uid://duvbnb7yype4c" path="res://Art/crate.png" id="1_18chb"]
-[ext_resource type="Script" path="res://Objects/crate.gd" id="1_nk55s"]
+[ext_resource type="Script" path="res://Scripts/crate.gd" id="1_nk55s"]
 [ext_resource type="AudioStream" uid="uid://yljothvawctq" path="res://Audio/destroy.mp3" id="3_0r6ap"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3s180"]
