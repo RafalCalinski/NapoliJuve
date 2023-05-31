@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://88il35cv14rd"
-path="res://.godot/imported/patyk.png-9159107967a498fc76cad92c23ed74fb.ctex"
+uid="uid://bi2amtlchqvc2"
+path="res://.godot/imported/daj kamienia.png-b7bd65c153f0148b09b6f070bddc9004.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://patyk.png"
-dest_files=["res://.godot/imported/patyk.png-9159107967a498fc76cad92c23ed74fb.ctex"]
+source_file="res://Art/daj kamienia.png"
+dest_files=["res://.godot/imported/daj kamienia.png-b7bd65c153f0148b09b6f070bddc9004.ctex"]
 
 [params]
 
