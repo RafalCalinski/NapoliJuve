@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://byye56omklmhi"]
+
+[ext_resource type="Texture2D" uid="uid://bs4hgj82tb3ca" path="res://Art/Fpe42f0X0AAd5Ph.jpg" id="1_dvn53"]
+
+[node name="Backpack" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+lock_rotation = true
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.97, 1)
+texture = ExtResource("1_dvn53")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+scale = Vector2(30.3125, 29.3125)
+build_mode = 1
+polygon = PackedVector2Array(-10, 10, 10, 10, 10, -10, 7, -10, 7, 8, -8, 8, -8, -10, -10, -10)
