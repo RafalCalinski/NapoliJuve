@@ -25,12 +25,13 @@ func _on_hitbox_area_entered(_area):
 		$CollisionShape2D.queue_free()
 		$AudioStreamPlayer.play()
 		
-		var wood = loot.instantiate()
 		
-		for i in range(3, randi_range(4,5)):
+		
+		for i in range(randi_range(1,5)):
+			var wood = loot.instantiate()
 			owner.call_deferred("add_child", wood)
-			wood.position.x = global_position.x + randf_range(-10,10)
-			wood.position.y = global_position.y + randf_range(-10,10)
+			wood.position.x = global_position.x + randf_range(-100,100)
+			wood.position.y = global_position.y + randf_range(-100,100)
 			wood.rotation = randf_range(0, 360)
 
 

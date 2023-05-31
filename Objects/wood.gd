@@ -6,3 +6,6 @@ func _on_area_2d_area_entered(_area):
 	queue_free()
 	
 	print(player.inventory[0])
+	
+func _ready():
+	$AnimationPlayer.play("instantiate")
