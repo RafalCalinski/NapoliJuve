@@ -10,9 +10,12 @@ const friction = 3000
 
 var input = Vector2.ZERO
 
+var max_capacity = 100
+var capacity = 0
 var inventory = [
-{"name": "wood", "amount": 0, "size": 1}, 
+{"name": "wood", "amount": 0, "size": 5}, 
 {"name": "stick", "amount": 0, "size": 1},
+{"name": "rock", "amount": 0, "size": 10},
 ]
 
 func get_input():

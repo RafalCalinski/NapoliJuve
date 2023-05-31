@@ -18,21 +18,27 @@ func _on_hitbox_area_entered(_area):
 	HP -= 1
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("hit")
-	$hitsound.play()
+	
+	
+	
 	if HP <= 0:
 		$AnimationPlayer.play("destroy")
 		$Hitbox.queue_free()
 		$CollisionShape2D.queue_free()
 		$AudioStreamPlayer.play()
 		
-		
-		
-		for i in range(randi_range(1,2)):
+		for i in range(randi_range(1,3)):
 			var loot = wood.instantiate()
-			owner.call_deferred("add_child", loot)
-			loot.position.x = global_position.x + randf_range(-100,100)
+			get_parent().call_deferred("add_child", loot)
+			loot.position.x = global_position.x + randf_range(-300,300)
 			loot.position.y = global_position.y + randf_range(-100,100)
 			loot.rotation = randf_range(0, 360)
+		
+	else:
+		$hitsound.play()
+		
+		
+	
 			
 
 

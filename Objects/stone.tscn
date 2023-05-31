@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqi3pg71jda2x"]
 
 [ext_resource type="Script" path="res://Scripts/stone.gd" id="1_8cetm"]
-[ext_resource type="PackedScene" uid="uid://cac5w12v1eay5" path="res://Objects/stick.tscn" id="3_pbdo1"]
+[ext_resource type="PackedScene" uid="uid://b40cpl328j7vb" path="res://Objects/rock.tscn" id="2_s7ond"]
+[ext_resource type="AudioStream" uid="uid://f48f348tw7rx" path="res://Audio/Rock Smash Sound Effect.mp3" id="4_kmmct"]
 [ext_resource type="Texture2D" uid="uid://bi2amtlchqvc2" path="res://Art/daj kamienia.png" id="4_pl7wj"]
-[ext_resource type="AudioStream" uid="uid://74yihh2me4tw" path="res://Audio/wood_break.ogg" id="5_1bxbd"]
-[ext_resource type="AudioStream" uid="uid://b566c444bdljl" path="res://Audio/taco bell sound.mp3" id="6_qemig"]
+[ext_resource type="AudioStream" uid="uid://qxarmq5ll6rs" path="res://Audio/Something being hit - Sound Effect.mp3" id="5_3fpxu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0oahp"]
 size = Vector2(204.2, 101)
@@ -90,9 +90,12 @@ _data = {
 }
 
 [node name="Stone" type="RigidBody2D"]
+collision_mask = 0
 gravity_scale = 0.0
+lock_rotation = true
+freeze = true
 script = ExtResource("1_8cetm")
-wood = ExtResource("3_pbdo1")
+wood = ExtResource("2_s7ond")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
@@ -117,11 +120,12 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_1bxbd")
-volume_db = -63.135
+stream = ExtResource("4_kmmct")
+volume_db = -6.919
 
 [node name="hitsound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_qemig")
+stream = ExtResource("5_3fpxu")
+volume_db = -21.549
 max_polyphony = 3
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

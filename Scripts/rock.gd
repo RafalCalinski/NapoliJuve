@@ -1,6 +1,6 @@
 extends Item
 
 func _ready():
-	id = 0
+	id = 2
 	
 	$AnimationPlayer.play("instantiate")
