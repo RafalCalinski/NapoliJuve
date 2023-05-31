@@ -10,11 +10,17 @@ const friction = 3000
 
 var input = Vector2.ZERO
 
+var inventory = [
+{"name": "wood", "amount": 0, "size": 1}, 
+{"name": "stone", "amount": 0, "size": 1},
+]
+
 func get_input():
 	input.x = int(Input.is_action_pressed("Right")) - int(Input.is_action_pressed("Left"))
 	input.y = int(Input.is_action_pressed("Down")) - int(Input.is_action_pressed("Up"))
 	return input.normalized()
-# Called when the node enters the scene tree for the first time.
+	
+
 func player_movement(delta):
 	input = get_input()
 	
@@ -55,3 +61,4 @@ func melee():
 	owner.add_child(m)
 	m.transform = $Marker2D.global_transform
 	$AudioStreamPlayer.play()
+	
