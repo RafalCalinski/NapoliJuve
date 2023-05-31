@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8i5vx472luui"]
+[gd_scene load_steps=13 format=3 uid="uid://b8i5vx472luui"]
 
 [ext_resource type="Texture2D" uid="uid://co8rq0k2r38xj" path="res://Art/tree.png" id="1_dadye"]
 [ext_resource type="Script" path="res://Scripts/tree.gd" id="1_vxhtd"]
 [ext_resource type="PackedScene" uid="uid://b3mjtvc7t2fr6" path="res://Objects/wood.tscn" id="2_dcjhe"]
-[ext_resource type="AudioStream" uid="uid://yljothvawctq" path="res://Audio/destroy.mp3" id="3_38t45"]
+[ext_resource type="PackedScene" uid="uid://cac5w12v1eay5" path="res://Objects/stick.tscn" id="3_w8ko2"]
 [ext_resource type="AudioStream" uid="uid://b566c444bdljl" path="res://Audio/taco bell sound.mp3" id="4_0a01q"]
+[ext_resource type="AudioStream" uid="uid://74yihh2me4tw" path="res://Audio/wood_break.ogg" id="5_s2d0l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rh5cj"]
 radius = 109.073
@@ -95,7 +96,8 @@ _data = {
 [node name="Tree" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_vxhtd")
-loot = ExtResource("2_dcjhe")
+wood = ExtResource("2_dcjhe")
+stick = ExtResource("3_w8ko2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_dadye")
@@ -117,7 +119,7 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_38t45")
+stream = ExtResource("5_s2d0l")
 volume_db = -20.0
 
 [node name="hitsound" type="AudioStreamPlayer2D" parent="."]

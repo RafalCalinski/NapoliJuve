@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://cac5w12v1eay5"]
+
+[ext_resource type="Script" path="res://Scripts/stick.gd" id="1_mnpl2"]
+[ext_resource type="Texture2D" uid="uid://wqnabaq2kjk1" path="res://Art/patyk.png" id="2_6uqa6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uty17"]
+size = Vector2(2622, 253)
+
+[sub_resource type="Animation" id="Animation_4lx8w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_kbeb6"]
+resource_name = "instantiate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ek3ow"]
+_data = {
+"RESET": SubResource("Animation_4lx8w"),
+"instantiate": SubResource("Animation_kbeb6")
+}
+
+[node name="Stick" type="Node2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_mnpl2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -0.296706
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_6uqa6")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 5.5)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_uty17")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ek3ow")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

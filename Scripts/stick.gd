@@ -1,5 +1,5 @@
 extends Item
 
 func _ready():
-	var id = 0
+	var id = 1
 	

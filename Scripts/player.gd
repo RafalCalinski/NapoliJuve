@@ -12,7 +12,7 @@ var input = Vector2.ZERO
 
 var inventory = [
 {"name": "wood", "amount": 0, "size": 1}, 
-{"name": "stone", "amount": 0, "size": 1},
+{"name": "stick", "amount": 0, "size": 1},
 ]
 
 func get_input():
