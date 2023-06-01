@@ -4,8 +4,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e2brc"]
 shader = ExtResource("1_wwgek")
-shader_parameter/amount = 20.0
+shader_parameter/amount = 7.0
 shader_parameter/vignette = 0.75
+shader_parameter/lod = 2.5
 
 [node name="Shader" type="CanvasLayer"]
 

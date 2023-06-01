@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://co8rq0k2r38xj" path="res://Art/tree.png" id="1_dadye"]
 [ext_resource type="Script" path="res://Scripts/tree.gd" id="1_vxhtd"]
 [ext_resource type="PackedScene" uid="uid://b3mjtvc7t2fr6" path="res://Objects/wood.tscn" id="2_dcjhe"]
-[ext_resource type="PackedScene" uid="uid://cac5w12v1eay5" path="res://Objects/stick.tscn" id="3_w8ko2"]
+[ext_resource type="PackedScene" path="res://Objects/stick.tscn" id="3_w8ko2"]
 [ext_resource type="AudioStream" uid="uid://74yihh2me4tw" path="res://Audio/wood_break.ogg" id="5_s2d0l"]
 [ext_resource type="AudioStream" uid="uid://qxarmq5ll6rs" path="res://Audio/Something being hit - Sound Effect.mp3" id="6_6gfeb"]
 

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cp4kxw1hg7kp4" path="res://Objects/player.tscn" id="4_mbljp"]
 [ext_resource type="Texture2D" uid="uid://yab5n4tyk0la" path="res://Art/grid.png" id="4_tgyam"]
 [ext_resource type="PackedScene" uid="uid://b8i5vx472luui" path="res://Objects/tree.tscn" id="5_nn2i1"]
-[ext_resource type="PackedScene" uid="uid://bqi3pg71jda2x" path="res://Objects/stone.tscn" id="6_b8cmw"]
+[ext_resource type="PackedScene" path="res://Objects/stone.tscn" id="6_b8cmw"]
 
 [node name="MainWorld" type="Node2D"]
 script = ExtResource("1_uc3pr")
